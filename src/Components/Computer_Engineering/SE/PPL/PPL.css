@@ -1,0 +1,40 @@
+.SE_Comp {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 100px; /* Add padding-top */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.SE_Comp p {
+    margin-bottom: 20px;
+}
+
+.SE_Comp p:last-child {
+    margin-bottom: 0;
+}
+
+.SE_Comp h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.SE_Comp h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.SE_Comp h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.SE_Comp a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.SE_Comp a:hover {
+    text-decoration: underline;
+}

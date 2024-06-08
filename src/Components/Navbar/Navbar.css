@@ -1,0 +1,179 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding-top: 60px; /* Adjusted padding to match reduced navbar height */
+  height: 100vh;
+  background: #fff;
+  color: #161617;
+}
+
+:root {
+  --color-primary: #4b6aff;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px; /* Reduced padding */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 1000;
+  margin-bottom: 20px; /* Added margin-bottom */
+}
+
+nav .logo {
+  height: 30px; /* Reduced logo height */
+  width: auto;  /* Automatically adjust the width to maintain aspect ratio */
+}
+
+nav > :is(h1, span.material-symbols-outlined) {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+}
+
+nav h1 {
+  background: #343950;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+nav span {
+  color: #fff;
+  font-size: 20px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 60px; /* Reduced menu height */
+}
+
+.menu li {
+  display: inline-block;
+  width: 80px;
+  color: #999;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu li:hover .submenu {
+  height: 85px;
+}
+
+.menu > li:hover > a {
+  color: #161617;
+}
+
+.menu > li:hover > a::before {
+  visibility: visible;
+  scale: 1 1;
+}
+
+.submenu {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  background-color: var(--color-primary);
+  height: 0;
+  line-height: 40px;
+  box-sizing: border-box;
+  transition: height 0.3s ease-in-out;
+}
+
+.menu li .submenu a {
+  color: #fff;
+  opacity: 0;
+  font-size: 16px;
+  transition: opacity 0.25s;
+}
+
+.menu > li:hover .submenu a {
+  opacity: 1;
+}
+
+.menu > li .submenu a:hover {
+  background: rgb(0 0 0 / 20%);
+}
+
+.menu > li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 7px;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.menu > li > a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 3px;
+  left: 0px;
+  background-color: var(--color-primary);
+  transition: all 0.2s ease-in-out;
+  scale: 0 0;
+  visibility: hidden;
+}
+
+.subsubmenu {
+  overflow: hidden;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  display: none; /* Hide by default */
+  width: 150px; /* Adjust width as needed */
+  background-color: var(--color-primary); /* Background color */
+  transition: all 0.3s ease-in-out;
+}
+
+.submenu li:hover .subsubmenu {
+  display: block; /* Show on hover */
+}
+
+.subsubmenu li {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Border color */
+}
+
+.subsubmenu li:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+.subsubmenu li a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.subsubmenu li a:hover {
+  background: rgba(255, 255, 255, 0.2); /* Background color on hover */
+}

@@ -1,0 +1,16 @@
+/* App.css */
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding-top: 70px; /* Ensure content is not hidden behind the navbar */
+  height: 100vh;
+  background: #fff;
+  color: #161617;
+  /* Center text vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Add any other body styles here */
+}
