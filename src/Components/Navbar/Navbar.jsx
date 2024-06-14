@@ -7,6 +7,14 @@ const Navbar = () => {
     <nav>
       <img src="../logo.jpg" alt="logo" className="logo" /> {/* Add className "logo" */}
       <ul className="menu">
+      <li>
+          <NavLink to="/computer">Mechniqual</NavLink>
+          <ul className="submenu">
+            <li><NavLink to="/computer/sublist">SE</NavLink></li>
+            <li><NavLink to="/computer/se">TE</NavLink></li>
+            <li><NavLink to="/computer/se">BE</NavLink></li>
+          </ul>
+        </li>
         <li>
           <NavLink to="/FE">FE</NavLink>
           <ul className="submenu">
@@ -39,6 +47,24 @@ const Navbar = () => {
             <li><NavLink to="/computer/se">BE</NavLink></li>
           </ul>
         </li>
+        <li>
+          <NavLink to="/computer">Civil</NavLink>
+          <ul className="submenu">
+            <li><NavLink to="/computer/sublist">SE</NavLink></li>
+            <li><NavLink to="/computer/se">TE</NavLink></li>
+            <li><NavLink to="/computer/se">BE</NavLink></li>
+          </ul>
+        </li>
+
+        <li>
+          <NavLink to="/computer">Chemical</NavLink>
+          <ul className="submenu">
+            <li><NavLink to="/computer/sublist">SE</NavLink></li>
+            <li><NavLink to="/computer/se">TE</NavLink></li>
+            <li><NavLink to="/computer/se">BE</NavLink></li>
+          </ul>
+        </li>
+        
       </ul>
       <span className="material-symbols-outlined">menu</span>
     </nav>

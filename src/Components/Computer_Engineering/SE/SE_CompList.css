@@ -24,7 +24,7 @@ body {
   align-items: center;
   flex-wrap: wrap; /* Allows wrapping to the next line if necessary */
   padding: 20px;
-  margin-top: 70px; /* Added margin-top */
+  margin-top: 1470px; /* Added margin-top */
 }
 
 .card {
