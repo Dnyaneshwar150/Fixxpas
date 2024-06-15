@@ -1,0 +1,56 @@
+.container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .question {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .question h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .answer h3 {
+    font-size: 1.3em;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .answer ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+  }
+  
+  .answer li {
+    margin-bottom: 20px;
+  }
+  
+  .answer strong {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .answer ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  .answer ul li {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    color: #555;
+  }
+  

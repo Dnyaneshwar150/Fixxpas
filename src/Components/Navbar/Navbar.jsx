@@ -11,7 +11,7 @@ const Navbar = () => {
           <NavLink to="/computer">Mechniqual</NavLink>
           <ul className="submenu">
             <li><NavLink to="/computer/sublist">SE</NavLink></li>
-            <li><NavLink to="/computer/se">TE</NavLink></li>
+            <li><NavLink to="/computer/sublist">TE</NavLink></li>
             <li><NavLink to="/computer/se">BE</NavLink></li>
           </ul>
         </li>
@@ -26,8 +26,8 @@ const Navbar = () => {
         <li>
           <NavLink to="/computer">Computer</NavLink>
           <ul className="submenu">
-            <li><NavLink to="/computer/sublist">SE</NavLink></li>
-            <li><NavLink to="/computer/se">TE</NavLink></li>
+            <li><NavLink to="/computer/SEsublist">SE</NavLink></li>
+            <li><NavLink to="/computer/TEsublist">TE</NavLink></li>
             <li><NavLink to="/computer/se">BE</NavLink></li>
           </ul>
         </li>
