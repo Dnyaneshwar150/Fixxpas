@@ -1,8 +1,10 @@
 import React,{ useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ReactGA from 'react-ga';
+
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
-import Footer from './Components/Footer/Footer';
+import Home from './Components/Home/Home';
 // computer SE
 
 import SE_CompList from './Components/Computer_Engineering/SE/SE_CompList';
@@ -24,45 +26,52 @@ import TE_CompList from './Components/Computer_Engineering/TE/TE_CompList';
 
 
 function App() {
+  const tracking_id = 'G-2KZEXK355Y';
+ReactGA.initialize(tracking_id);
+ReactGA.pageview("/" + window.location.search);
+
   // useEffect(() => {
   //   // Disable right-click context menu
   //   const handleContextMenu = (event) => {
   //     event.preventDefault();
   //   };
-
+  
   //   // Disable "Print Screen" key
   //   const handleKeyDown = (event) => {
   //     if (event.key === 'PrintScreen') {
   //       event.preventDefault();
   //     }
   //   };
-
+  
   //   // Disable copy and text selection
   //   const handleCopy = (event) => {
   //     event.preventDefault();
   //   };
-
+  
   //   const handleSelectStart = (event) => {
   //     event.preventDefault();
   //   };
-
+  
+  //   // Add event listeners
   //   document.addEventListener('contextmenu', handleContextMenu);
   //   document.addEventListener('keydown', handleKeyDown);
   //   document.addEventListener('copy', handleCopy);
   //   document.addEventListener('selectstart', handleSelectStart);
-
+  
+  //   // Clean up event listeners on component unmount
   //   return () => {
   //     document.removeEventListener('contextmenu', handleContextMenu);
   //     document.removeEventListener('keydown', handleKeyDown);
   //     document.removeEventListener('copy', handleCopy);
   //     document.removeEventListener('selectstart', handleSelectStart);
   //   };
-  // }, [])
+  // }, []);
   return (
     <BrowserRouter>
       <div className="App">
         <Navbar />
         <Routes>
+        <Route path="/" element={<Home />} /> {/* Define the route for Home component */}
           {/* SE_computer */ }
           <Route path="/computer/SEsubList" element={<SE_CompList />} /> {/* Route for SE_CompList */}
           <Route path="/questions/Discrete-Mathematics" element={<DiscreteMathematics />} /> {/* Route for Computer Graphics */}
@@ -79,7 +88,6 @@ function App() {
           <Route path="/computer/TEsubList" element={<TE_CompList />} /> {/* Route for TE_CompList */}
 
         </Routes>
-        {/* <Footer /> */}
       </div>
     </BrowserRouter>
   );
