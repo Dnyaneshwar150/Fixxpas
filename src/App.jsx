@@ -1,7 +1,6 @@
 import React,{ useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ReactGA from 'react-ga';
-import TagManager from 'react-gtm-module'
+// import TagManager from 'react-gtm-module'
 
 
 import './App.css';
@@ -28,14 +27,7 @@ import TE_CompList from './Components/Computer_Engineering/TE/TE_CompList';
 
 
 function App() {
-  const tracking_id = 'G-2KZEXK355Y';
-ReactGA.initialize(tracking_id);
-ReactGA.pageview("/" + window.location.search);
-
-const tagManagerArgs = {
-  gtmId: 'GTM-MS5GRWFH'
-}
-TagManager.initialize(tagManagerArgs)
+  
 
   // useEffect(() => {
   //   // Disable right-click context menu
