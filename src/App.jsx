@@ -19,7 +19,7 @@ import MicroProcessor from './Components/Computer_Engineering/SE/Microprocessor/
 import PrincipalofProgrammingLanguage from './Components/Computer_Engineering/SE/Principal_of_Programming_Language/Principal_of_Programming_Language';
 import TE_CompList from './Components/Computer_Engineering/TE/TE_CompList';
 
-const tracking_id = 'G-NHZWHDJKBD';
+const tracking_id = 'G-7RR07GE6S2';
 ReactGA.initialize(tracking_id);
 
 function App() {
