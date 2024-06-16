@@ -1,6 +1,8 @@
 import React,{ useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import TagManager from 'react-gtm-module'
+import ReactGA from 'react-ga';
+
 
 
 import './App.css';
@@ -25,9 +27,18 @@ import PrincipalofProgrammingLanguage from './Components/Computer_Engineering/SE
 import TE_CompList from './Components/Computer_Engineering/TE/TE_CompList';
 
 
+const tracking_id = 'G-2KZEXK355Y';
+ReactGA.initialize(tracking_id);
+
 
 function App() {
-  
+useEffect(()=>{
+    ReactGA.send({
+      hitType:"pageview",
+      page:window.location.pathname + window.location.search,
+      title:"Home Page"
+    });
+},[]);
 
   // useEffect(() => {
   //   // Disable right-click context menu
