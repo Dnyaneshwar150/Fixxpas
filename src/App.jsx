@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect ,} from 'react';
+import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 //import ReactGA from 'react-ga';
@@ -31,9 +31,15 @@ TagManager.initialize(tagManagerArgs)
 
 function App() {
 
-  window.dataLayer.push({
-    event: 'pageview'
-  });
+  
+
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'pageview',
+      page: location.pathname + location.search
+    });
+  }, []);
 
   
 

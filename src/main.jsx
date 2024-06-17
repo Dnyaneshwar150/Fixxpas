@@ -1,19 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-// import ReactGA from 'react-ga';
-
-// const tracking_id = 'G-2KZEXK355Y';
-// ReactGA.initialize(tracking_id);
-
-// ReactGA.pageview(window.location.pathname);
-
-
-
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
-   </React.StrictMode>,
-)
+      <App />
+  </React.StrictMode>
+);
