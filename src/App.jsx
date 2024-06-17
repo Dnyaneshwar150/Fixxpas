@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
-import ReactGA from 'react-ga';
+//import ReactGA from 'react-ga';
 
 // Import your components
 import Home from './Components/Home/Home';
@@ -19,13 +19,27 @@ import MicroProcessor from './Components/Computer_Engineering/SE/Microprocessor/
 import PrincipalofProgrammingLanguage from './Components/Computer_Engineering/SE/Principal_of_Programming_Language/Principal_of_Programming_Language';
 import TE_CompList from './Components/Computer_Engineering/TE/TE_CompList';
 
-const tracking_id = 'G-F7693JH7LS';
-ReactGA.initialize(tracking_id);
+// const tracking_id = 'G-F7693JH7LS';
+// ReactGA.initialize(tracking_id);
+
+import TagManager from 'react-gtm-module'
+const tagManagerArgs = {
+  gtmId: 'GTM-MS5GRWFH'
+}
+
+TagManager.initialize(tagManagerArgs)
 
 function App() {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
+
+  window.dataLayer.push({
+    event: 'pageview'
+  });
+
+  
+
+  // useEffect(() => {
+  //   ReactGA.pageview(window.location.pathname + window.location.search);
+  // }, []);
 
   // Uncomment and adjust event listeners as needed
   // useEffect(() => {
